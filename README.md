@@ -44,7 +44,7 @@ coinhive.statsSite((error, response, body) => {
 
 ## Token verify
 
-**Coinhive endpoint:** [/token/verify](https://coinhive.com/documentation/http-api#token-verify)
+**Coinhive endpoint:** [/token/verify](https://coinhive.com/documentation/http-api#token-verify){:target="_blank"}
 
 Verify that a token from a CoinHive.Token miner has reached a number of hashes. Tokens are only valid for 1 hour. Note that a token can only be verified once. All subsequent requests to verify the same token will result in the invalid_token error.
 
@@ -77,7 +77,7 @@ coinhivePromise.verify({ token: 'yourtoken', hashes: 'yourhash' })
 
 ## User: balance
 
-**Coinhive endpoint:** [/user/balance](https://coinhive.com/documentation/http-api#user-balance)
+**Coinhive endpoint:** [/user/balance](https://coinhive.com/documentation/http-api#user-balance){:target="_blank"}
 
 Get the total number of hashes, the withdrawn hashes and the current balance for a user name. Think of it as the balance of a bank account. Hashes can be paid in through mining, and withdrawn through /user/withdraw.
 
@@ -112,7 +112,7 @@ coinhivePromise.userBalance({ name: 'username' })
 
 ## User: withdraw
 
-**Coinhive endpoint:** [/user/withdraw](https://coinhive.com/documentation/http-api#user-withdraw)
+**Coinhive endpoint:** [/user/withdraw](https://coinhive.com/documentation/http-api#user-withdraw){:target="_blank"}
 
 Withdraw a number of hashes for a user name. If successful, the requested amount will be subtracted from the user's balance.
 
@@ -147,7 +147,7 @@ coinhivePromise.userWithdraw({ name: 'username', amount: 'amount' })
 
 ## User: top users
 
-**Coinhive endpoint:** [/user/top](https://coinhive.com/documentation/http-api#user-top)
+**Coinhive endpoint:** [/user/top](https://coinhive.com/documentation/http-api#user-top){:target="_blank"}
 
 Get a list of top users ordered by total number of hashes, balance or hashes withdrawn.
 
@@ -182,7 +182,7 @@ coinhivePromise.userTop()
 
 ## User: list users
 
-**Coinhive endpoint:** [/user/list](https://coinhive.com/documentation/http-api#user-list)
+**Coinhive endpoint:** [/user/list](https://coinhive.com/documentation/http-api#user-list){:target="_blank"}
 
 
 Get a paginated list of all users in alphabetical order. Note that this will only return users with a total number of hashes greater than 0.
@@ -219,7 +219,7 @@ coinhivePromise.userList({ count: 'count', page: 'npage', order: 'sortType' })
 
 ## User: reset user
 
-**Coinhive endpoint:** [/user/reset](https://coinhive.com/documentation/http-api#user-reset)
+**Coinhive endpoint:** [/user/reset](https://coinhive.com/documentation/http-api#user-reset){:target="_blank"}
 
 
 Reset a user's total hashes and withdrawn amount to 0.
@@ -256,7 +256,7 @@ coinhivePromise.userReset({ name: 'username'} )
 
 ## User: reset all users
 
-**Coinhive endpoint:** [/user/reset-all](https://coinhive.com/documentation/http-api#user-reset-all)
+**Coinhive endpoint:** [/user/reset-all](https://coinhive.com/documentation/http-api#user-reset-all){:target="_blank"}
 
 
 Reset the hashes and withdrawn amount for all users for this site to 0.
@@ -293,7 +293,7 @@ coinhivePromise.resetAll()
 
 ## Link: create
 
-**Coinhive endpoint:** [/link/create](https://coinhive.com/documentation/http-api#link-create)
+**Coinhive endpoint:** [/link/create](https://coinhive.com/documentation/http-api#link-create){:target="_blank"}
 
 
 Create a new shortlink. You can also do this by hand, directly from your dashboard.
@@ -331,7 +331,7 @@ coinhivePromise.linkCreate({ url: 'https://www.google.com', hashes: '10' } )
 
 ## Stats: payout
 
-**Coinhive endpoint:** [/stats/payout](https://coinhive.com/documentation/http-api#stats-payout)
+**Coinhive endpoint:** [/stats/payout](https://coinhive.com/documentation/http-api#stats-payout){:target="_blank"}
 
 
 Get the current payout rate and stats about the network.
@@ -369,7 +369,7 @@ coinhivePromise.statsPayout()
 
 ## Stats: site
 
-**Coinhive endpoint:** [/stats/site](https://coinhive.com/documentation/http-api#stats-site)
+**Coinhive endpoint:** [/stats/site](https://coinhive.com/documentation/http-api#stats-site){:target="_blank"}
 
 
 Get the current hashrate, total hashes, paid & pending xmr, and the hourly history for the past seven days for the site.
@@ -407,7 +407,7 @@ coinhivePromise.statsSite()
 
 ## Stats: history
 
-**Coinhive endpoint:** [/stats/history](https://coinhive.com/documentation/http-api#stats-history)
+**Coinhive endpoint:** [/stats/history](https://coinhive.com/documentation/http-api#stats-history){:target="_blank"}
 
 
 Get the hourly history of total hashes and hashes/s for a time period for the site.
