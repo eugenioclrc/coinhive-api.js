@@ -44,7 +44,8 @@ coinhive.statsSite((error, response, body) => {
 
 ## Token verify
 
-[/token/verify](https://coinhive.com/documentation/http-api#token-verify)
+Coinhive endpoint: [/token/verify](https://coinhive.com/documentation/http-api#token-verify)
+
 Verify that a token from a CoinHive.Token miner has reached a number of hashes. Tokens are only valid for 1 hour. Note that a token can only be verified once. All subsequent requests to verify the same token will result in the invalid_token error.
 
 #### Usage
