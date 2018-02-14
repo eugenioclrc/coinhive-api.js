@@ -32,6 +32,14 @@ coinhive.statsSite((error, response, body) => {
 }
 ```
 
+Like it? ** buy me a beer! **
+
+BTC: 1M8sQivGiMx2f3R6rP3raTq5PDbnTHeC5n
+
+XMR: 4A76foXYghp1WBDjLjA4EDPwsvAisHRQY3tq8cUkBuducW6WkyhcU2EX5qiSxFdLQFLVaeeZcUhJULjwyBYeJFRdKVh2BxM
+
+
+
 ## Methods
 
 - [Token verify](#token-verify)

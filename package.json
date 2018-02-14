@@ -1,6 +1,6 @@
 {
   "name": "coinhive-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "node wrapper for Coinhive HTTP API",
   "keywords": [
     "coinhive",
