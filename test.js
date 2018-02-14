@@ -1,4 +1,6 @@
-const { CoinhivePromiseApi } = require('./index.js')
-const coinhive = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const { CoinhivePromiseLib } = require('./index.js')
+const coinhive = CoinhivePromiseLib('SECRET HASH')
 
-coinhive.statsSite().then(console.log)
+coinhive.verify({token: "token"})
+  .then(console.log)
+  .catch(console.error)

@@ -1,4 +1,4 @@
-const Api = require('./api.js')
+const CoinhiveLib = require('./lib.js')
 
 function makeCb (resolve, reject) {
   return (err, response, body) => {
@@ -10,13 +10,13 @@ function makeCb (resolve, reject) {
   }
 }
 
-module.exports = function createApi (secret) {
-  const api = Api(secret)
+module.exports = function createLib (secret) {
+  const coinhiveLib = CoinhiveLib(secret)
 
   const promiseFunc = {}
 
-  Object.keys(api).forEach(f => {
-    const funcObject = api[f]
+  Object.keys(coinhiveLib).forEach(f => {
+    const funcObject = coinhiveLib[f]
     promiseFunc[f] = (opts) => {
       return new Promise((resolve, reject) => {
         if (funcObject.length === 1) {

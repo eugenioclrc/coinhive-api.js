@@ -1,6 +1,6 @@
 const request = require('request')
 
-module.exports = function createApi (secret) {
+module.exports = function createLib (secret) {
   // https://coinhive.com/documentation/http-api#token-verify
   function verify ({ token = '', hashes = '' }, cb) {
     request.post({

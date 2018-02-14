@@ -1,8 +1,8 @@
-const CoinhiveApi = require('./api.js')
-const CoinhivePromiseApi = require('./promise-api.js')
+const CoinhiveLib = require('./lib.js')
+const CoinhivePromiseLib = require('./promise-lib.js')
 
 module.exports = {
-  CoinhiveApi,
-  default: CoinhiveApi,
-  CoinhivePromiseApi
+  CoinhiveLib,
+  default: CoinhiveLib,
+  CoinhivePromiseLib
 }

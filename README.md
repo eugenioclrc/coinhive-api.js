@@ -1,15 +1,21 @@
-# coinhive-api.js
+# coinhive-lib.js
 node wrapper for Coinhive HTTP API
+
+Install:
+
+```bash
+npm i coinhive-lib
+```
 
 
 ## Simple to use
 
-coinhive-api.js is a wrapper for the Coinhive HTTP API, its really simple and it comes in two flavours, traditional with callback and a promise api
+coinhive-lib.js is a wrapper for the Coinhive HTTP API, its really simple and it comes in two flavours, traditional with callback and a promise api
 
 ```js
-const { CoinhiveApi, CoinhivePromiseApi } = require('coinhive-api')
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const { CoinhiveLib, CoinhivePromiseLib } = require('coinhive-lib')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhivePromise.statsSite()
   .then(body => console.log(body))
@@ -51,7 +57,7 @@ Verify that a token from a CoinHive.Token miner has reached a number of hashes. 
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.verify({ token: 'yourtoken', hashes: 'yourhash' }, (error, response, body) => {
   if (error) {
@@ -65,7 +71,7 @@ coinhive.verify({ token: 'yourtoken', hashes: 'yourhash' }, (error, response, bo
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.verify({ token: 'yourtoken', hashes: 'yourhash' })
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -85,7 +91,7 @@ Get the total number of hashes, the withdrawn hashes and the current balance for
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.userBalance({ name: 'username' }, (error, response, body) => {
   if (error) {
@@ -99,7 +105,7 @@ coinhive.userBalance({ name: 'username' }, (error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.userBalance({ name: 'username' })
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -120,7 +126,7 @@ Withdraw a number of hashes for a user name. If successful, the requested amount
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.userWithdraw({ name: 'username', amount: 'amount' }, (error, response, body) => {
   if (error) {
@@ -134,7 +140,7 @@ coinhive.userWithdraw({ name: 'username', amount: 'amount' }, (error, response, 
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.userWithdraw({ name: 'username', amount: 'amount' })
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -155,7 +161,7 @@ Get a list of top users ordered by total number of hashes, balance or hashes wit
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.userTop((error, response, body) => {
   if (error) {
@@ -169,7 +175,7 @@ coinhive.userTop((error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.userTop()
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -192,7 +198,7 @@ Get a paginated list of all users in alphabetical order. Note that this will onl
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.userList({ count: 'count', page: 'npage', order: 'sortType' }, (error, response, body) => {
   if (error) {
@@ -206,7 +212,7 @@ coinhive.userList({ count: 'count', page: 'npage', order: 'sortType' }, (error, 
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.userList({ count: 'count', page: 'npage', order: 'sortType' })
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -229,7 +235,7 @@ Reset a user's total hashes and withdrawn amount to 0.
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.userReset({ name: 'username'}, (error, response, body) => {
   if (error) {
@@ -243,7 +249,7 @@ coinhive.userReset({ name: 'username'}, (error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.userReset({ name: 'username'} )
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -266,7 +272,7 @@ Reset the hashes and withdrawn amount for all users for this site to 0.
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.resetAll((error, response, body) => {
   if (error) {
@@ -280,7 +286,7 @@ coinhive.resetAll((error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.resetAll()
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -304,7 +310,7 @@ Create a new shortlink. You can also do this by hand, directly from your dashboa
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.linkCreate({ url: 'https://www.google.com', hashes: '10' }, (error, response, body) => {
   if (error) {
@@ -318,7 +324,7 @@ coinhive.linkCreate({ url: 'https://www.google.com', hashes: '10' }, (error, res
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.linkCreate({ url: 'https://www.google.com', hashes: '10' } )
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -341,7 +347,7 @@ Get the current payout rate and stats about the network.
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.statsPayout((error, response, body) => {
   if (error) {
@@ -355,7 +361,7 @@ coinhive.statsPayout((error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.statsPayout()
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -380,7 +386,7 @@ Get the current hashrate, total hashes, paid & pending xmr, and the hourly histo
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.statsSite((error, response, body) => {
   if (error) {
@@ -394,7 +400,7 @@ coinhive.statsSite((error, response, body) => {
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.statsSite()
   .then(body => console.log(body))
   .catch(error => console.error(error))
@@ -417,7 +423,7 @@ Get the hourly history of total hashes and hashes/s for a time period for the si
 #### Usage
 
 ```js
-const coinhive = CoinhiveApi('YOUR COINHIVE KEY HERE')
+const coinhive = CoinhiveLib('YOUR COINHIVE KEY HERE')
 
 coinhive.statsHistory({ begin: 'unixtimstampbegin', end: 'unixtimestampend'},(error, response, body) => {
   if (error) {
@@ -431,7 +437,7 @@ coinhive.statsHistory({ begin: 'unixtimstampbegin', end: 'unixtimestampend'},(er
 #### Usage with promise
 
 ```js
-const coinhivePromise = CoinhivePromiseApi('YOUR COINHIVE KEY HERE')
+const coinhivePromise = CoinhivePromiseLib('YOUR COINHIVE KEY HERE')
 coinhivePromise.statsHistory({ begin: 'unixtimstampbegin', end: 'unixtimestampend'})
   .then(body => console.log(body))
   .catch(error => console.error(error))
