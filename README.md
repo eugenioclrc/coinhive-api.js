@@ -32,7 +32,9 @@ coinhive.statsSite((error, response, body) => {
 }
 ```
 
-Like it? ** buy me a beer! **
+---
+
+Like it? **buy me a beer!**
 
 BTC: 1M8sQivGiMx2f3R6rP3raTq5PDbnTHeC5n
 
