@@ -1,6 +1,8 @@
 # coinhive-lib.js
 node wrapper for Coinhive HTTP API
 
+[![NPM](https://nodei.co/npm/coinhive-lib.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/coinhive-lib/)
+
 Install:
 
 ```bash
