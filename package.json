@@ -1,6 +1,6 @@
 {
   "name": "coinhive-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node wrapper for Coinhive HTTP API",
   "repository": "github:eugenioclrc/coinhive-api.js",
   "bugs": {
@@ -17,7 +17,9 @@
   "author": "Eugenio <eugenioclrc@gmail.com>",
   "license": "SEE LICENSE IN LICENSE",
   "files": [
-    "index.js"
+    "index.js",
+    "lib.js",
+    "promise-lib.js"
   ],
   "dependencies": {
     "request": "^2.83.0"
