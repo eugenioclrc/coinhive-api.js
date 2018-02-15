@@ -1,7 +1,11 @@
 {
   "name": "coinhive-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node wrapper for Coinhive HTTP API",
+  "repository": "github:eugenioclrc/coinhive-api.js",
+  "bugs": {
+    "url": "https://github.com/eugenioclrc/coinhive-api.js/issues"
+  },
   "keywords": [
     "coinhive",
     "api"

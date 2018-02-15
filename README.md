@@ -3,6 +3,9 @@ node wrapper for Coinhive HTTP API
 
 [![NPM](https://nodei.co/npm/coinhive-lib.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/coinhive-lib/)
 
+[github repo link](https://github.com/eugenioclrc/coinhive-api.js)
+
+
 Install:
 
 ```bash
